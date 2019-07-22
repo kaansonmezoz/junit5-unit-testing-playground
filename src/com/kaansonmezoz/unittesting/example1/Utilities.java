@@ -1,6 +1,17 @@
 package com.kaansonmezoz.unittesting.example1;
 
+import java.util.List;
+
 public class Utilities {
+    private List<Environment> list;
+
+    public Utilities() {
+    }
+
+    public Utilities(List<Environment> list) {
+        this.list = list;
+    }
+
     public char[] everyNthChar(char[] sourceArray, int n){
         if(sourceArray == null || sourceArray.length < n){
             return sourceArray;
@@ -46,5 +57,11 @@ public class Utilities {
         returnValues[1] = null;
 
         return returnValues[source.length() % 2];
+    }
+
+    public void printEnvironments(){
+        for(Environment environment: list){
+            System.out.println(environment.getEnviroment());
+        }
     }
 }
